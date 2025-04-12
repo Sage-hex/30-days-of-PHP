@@ -35,8 +35,41 @@ $var5 = null;
 echo gettype($var1) . '<br>';
 echo gettype($var2) . '<br>';
 echo gettype($var3) . '<br>';
-echo gettype($var4). '<br>';
-echo gettype($var5 . '<br>');
+echo gettype($var4) . '<br>';
+echo gettype($var5) . '<br>';
+
+
+
+## Exercise 2: Type Conversion
+// ```php
+// <?php
+// // Exercise 2: Type Conversion
+// $numberStr = "123";
+// $floatStr = "45.67";
+// $isTrue = "1";
+
+// // Convert variables explicitly:
+// $integer = (int)$numberStr; // Convert to integer
+// Convert $floatStr to float and $isTrue to boolean
+
+
+
+$numberStr = "123";
+$floatStr = "45.67";
+$isTrue = "1";
+
+// Integer conversion
+$integer = (int)$numberStr;
+var_dump($integer); // int(123)
+echo "<br>";
+
+// Float conversion
+$float = (float)$floatStr;
+echo number_format($float, 2) . '<br>'; // 45.67
+
+// Boolean conversion
+$bool = (bool)$isTrue;
+var_dump($bool); // bool(true)
 
     ?>
 </body>
