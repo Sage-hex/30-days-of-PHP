@@ -70,6 +70,34 @@ echo number_format($float, 2) . '<br>'; // 45.67
 // Boolean conversion
 $bool = (bool)$isTrue;
 var_dump($bool); // bool(true)
+echo "<br>";
+## Exercise 3: String Manipulation
+
+$text = "  Hello, PHP!  ";
+
+// Trim whitespace, reverse the string, and convert to uppercase:
+$trimmed = trim($text);
+$reversed = strrev($trimmed);
+$uppercase = strtoupper($trimmed);
+
+echo $trimmed . "<br>";
+echo $reversed . "<br>";
+echo $uppercase . "<br>";
+// // Output $reversed and $uppercase
+
+
+
+
+## Exercise 4: Array Operations
+
+// Exercise 4: Array Operations
+$fruits = ["apple", "banana"];
+
+// Add "cherry" to the end of the array
+// Remove the first element ("apple")
+// Check if "banana" exists in the array
+
+
 
     ?>
 </body>
