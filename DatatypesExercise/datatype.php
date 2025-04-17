@@ -91,14 +91,30 @@ echo $uppercase . "<br>";
 ## Exercise 4: Array Operations
 
 // Exercise 4: Array Operations
-$fruits = ["apple", "banana"];
+// $fruits = ["apple", "banana"];
 
 // Add "cherry" to the end of the array
 // Remove the first element ("apple")
 // Check if "banana" exists in the array
 
+// String method
 
+$x = "Hello world!";
+// slice a particular portion
+echo substr($x,6,5);
+// slice to the end
+echo substr($x,6);
 
+// slice from the end
+// Note The last character has index -1.
+echo substr($x, -5, 3);
+
+// Example
+// From the string "Hi, how are you?", get the characters starting from index 5, and continue until you reach the 3. character from the end (index -3).
+
+// Should end up with "ow are y":
+$x = "Hi, how are you?";
+echo substr($x,5,-3);
     ?>
 </body>
 </html>
