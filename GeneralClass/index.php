@@ -206,9 +206,53 @@
     // ASSOCIATE ARRAY
     // Associative arrays are arrays that use named keys that you assign to them.
     // An associative array is an array where each key is associated with a value.
-    $assoc_arr = array("name" => "John", "age" => 30, "city" => "New York"); // $assoc_arr is an associative array with keys "name", "age", "city"
-    echo $assoc_arr["name"]; // $assoc_arr["name"] is "John", so "John" will be printed
+    // The keys can be strings or integers, and the values can be any type of data.
+    // Associative arrays are useful when you want to store data in a way that is easy to access and understand.
+    // For example, you can use an associative array to store information about a person, such as their name, age, and address.
+    // In this example, we create an associative array called $assoc_arr with keys "name", "age", and "city".
+    // We then access the value associated with the key "name" and print it.
+    // We also use var_dump() to display the structure of the array.
+    $assoc_arr = array("name" => "John", "age" => 30, "city" => "New York","school" => "Holyghost"); // $assoc_arr is an associative array with keys "name", "age", "city"
     echo "<br>";
+    echo $assoc_arr["name"]; // $assoc_arr["name"] is "John", so "John" will be printed
+    echo var_dump($assoc_arr); // $assoc_arr is an associative array, so it will be printed as an associative array
+
+    // second option of creating an associative array
+    $assoc_arr2 = [
+        "name" => "John",
+        "age" => 30,
+        "city" => "New York",
+        "school" => "Holyghost"
+    ]; // $assoc_arr2 is an associative array with keys "name", "age", "city"
+    $car1["brand"] = "Toyota"; // $car1["brand"] is "Toyota", so "Toyota" will be printed
+    $car1["model"] = "Corolla"; // $car1["model"] is "Corolla", so "Corolla" will be printed
+    $car1["year"] = 2020; // $car1["year"] is 2020, so 2020 will be printed
+    $car1["color"] = "red"; // $car1["color"] is "red", so "red" will be printed
+    echo "<br>";
+
+    foreach ($assoc_arr as $key => $value) {
+        echo "$key: $value<br>"; // $key is the key and $value is the value, so it will be printed as "key: value"
+        echo "<br>";
+    }
+    // Multidimensional array
+    // A multidimensional array is an array that contains one or more arrays.
+    // Expensive cars
+    // Audi, Mercedes, BMW
+
+    // inexpensive cars
+    // Volvo, Ford, Toyota
+
+    $cars = array(
+        "Expensive" => array("Audi", "Mercedes", "BMW"), // $cars["Expensive"] is an array with values "Audi", "Mercedes", "BMW"
+
+        "Inexpensive"=> array("Volvo", "Ford", "Toyota") // $cars["Inexpensive"] is an array with values "Volvo", "Ford", "Toyota"	
+
+    ); // $cars is a multidimensional array with keys "Expensive", "Inexpensive"
+    echo "<br>";
+    echo $cars["Expensive"][2]; // $cars["Expensive"][0] is "Audi", so "Audi" will be printed	
+    echo "<br>";
+
+
     // echo var_dump($x); // $x is null, so nothing will be printed
 
 
