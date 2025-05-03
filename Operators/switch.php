@@ -33,18 +33,18 @@
                 echo "Welcome Superadmin! <br>";
                 break;
             
-                case "Boss":
+            case "Boss":
                     echo "Welcome Boss! <br>";
                     break;
 
-                    // it is professional to add a default block so that if the condiion is nmot in the swicth block then the default block woll  be printed out, A default is always seen as the else statement in ifelse statement.
-                    // the default block is optional but it is a good practice to add it in your code.
-                        case "Member":
-                            echo "Welcome Member! <br>";
-                            break;
+                // it is professional to add a default block so that if the condiion is nmot in the swicth block then the default block woll  be printed out, A default is always seen as the else statement in ifelse statement.
+                // the default block is optional but it is a good practice to add it in your code.
+            case "Member":
+                    echo "Welcome Member! <br>";
+                        break;
 
-                    default:
-                        echo "User has no role! <br>";
+            default:
+                    echo "User has no role! <br>";
                         break;
 
 
