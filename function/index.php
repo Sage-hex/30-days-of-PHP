@@ -11,15 +11,16 @@
 
 include 'includes/head.php';
 include 'includes/header.php';	
-
-
-
+require 'includes/header.php';	
+include_once 'includes/header.php';	
+require_once 'includes/header.php';	
 
 ?>
 
 
 
     <h1><?php introduction();?></h1>
+
 
 
 <?php
