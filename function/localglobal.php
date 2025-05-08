@@ -18,7 +18,7 @@
     // Example of local and global variables
     $x = 5; // Global variable
 
-    function myFunction() {
+    function myFunction01() {
         $y = 10; // Local variable
         echo "The value of y is: " . $y . "<br>"; // This will work
     }
@@ -74,7 +74,7 @@
 
     // In summary, local variables are limited to the scope of the function or block in which they are declared, while global variables can be accessed from anywhere in the script. You can use the global keyword, the $GLOBALS array, or pass variables as parameters to work with global variables inside functions. Each approach has its own advantages and use cases, and it's important to choose the one that best fits your coding style and requirements.
 
-    
+
     
     
     
