@@ -62,14 +62,117 @@
         echo "$year is not a leap year";
      }
     
+     echo "<br>";
+    
+    //  Exercise 3:
+
+    /**
+     * Create two variables 'num1" and "num2" and create four functions "addNumbers", 'subtractNumbers', 'multiplyNumbers' and 'divide Numbers. The function accepts two parameters, and return the addition, subtraction, multiplicity or division of the two numbers.
+        
+     */
+    
+         
+    //Expected output:
+
+    // (Addition of nums' and 'numa' is 'addnumbers')
+    // Subtraction of 'nums' and 'numa' is 'addnumbers') (Multiplicity of 'nums" and "numa' is 'addnumbers') (Division of hums' and 'numa' is 'addnumbers)
+    
+    $num1 = 10;
+    $num2 = 15;
+
+    function addNumbers($num1, $num2){
+        return $num1 + $num2;
+    }
+
+    function subtractNumbers($num1, $num2){
+        return $num1 - $num2;
+    }
+    function multiplyNumbers($num1, $num2){
+        return $num1 * $num2;
+    }
+    function divideNumbers($num1, $num2){
+        return $num1 / $num2;
+    }
+
+    echo "Addition of " . $num1 . " and " . $num2 . " is " . addNumbers($num1, $num2);
+
+    echo "<br>";
+
+    echo "Subtraction of " . $num1 . " and " . $num2 . " is " . subtractNumbers($num1, $num2);
+
+    echo "<br>";
+
+    echo "Multiplicity of " . $num1 . " and " . $num2 . " is " . multiplyNumbers($num1, $num2);
+
+    echo "<br>";
+
+    echo "Division of " . $num1 . " and " . $num2 . " is " . divideNumbers($num1, $num2);
+
+    echo "<br>";
+    
+    // Exercise 4:
+
+// Exercise 4: Swapping numbers
+// Create a function 'swapNumbers that takes two parameters 'num1" and "num2", and inside the function swap the numbers. 
+// 
+// Expected output-
+// (Before swapping num1 = 4, num2 = 8)
+// (After swapping num1 =8, num2 = 4)
+    
+
+function swapNumbers($num1, $num2){
+    $temp = $num1;
+    $num1 = $num2;
+    $num2 = $temp;
+
+    echo "After swapping num 1 = " . $num1 . " num 2 = " . $num2;
+
+
+}
+
+swapNumbers($num1,$num2);
     
     
-    
-    
-    
-    
-    
-    
+echo "<br>";
+
+/**Exercise 5: Even or Odd
+Create a function 'evenOrNot' that checks if a given number 'num1' is even or odd. Echo
+the expected output
+
+Expected output:
+(Num1 is even)
+(Num2 is odd)
+*/
+
+function evenOrNot($num1){
+    if($num1 % 2 == 0){
+        return true;
+        
+    }else{
+        return false;
+    }
+
+    // Or 
+    // return $num1 % 2 == 0;
+}
+
+if(evenOrNot($num1)){
+    echo "$num1 is an even number";
+}else{
+    echo "$num1 is not an even number";
+}
+
+
+
+
+// Exercise 6: Prime number
+
+/**Create a function 'isPrime' that checks if 'num1" is a prime number or not. Return true if it is a prime number and return false if it is not a prime number.
+
+Expect output
+(num1 is a prime number)
+(num2 is not a prime number)
+*/   
     ?>
 </body>
 </html>
