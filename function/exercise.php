@@ -173,6 +173,55 @@ Expect output
 (num1 is a prime number)
 (num2 is not a prime number)
 */   
+
+echo "<br>";
+function isOdd($num1){
+    return $num1 % 2 != 0;
+}
+
+
+if(isOdd($num1)){
+    echo "$num1 is an odd number";
+}
+else{
+    echo "$num1 is not an odd number";
+}
+
+
+echo "<br>";
+
+$num1 = 7;
+// function isPrime($num){
+//     if($num <= 1){
+//         return true;
+//     }
+
+//     for($i = 2; $i <= sqrt($num); $i++){
+//         if($num % $i == 0) return false;
+//     }
+
+//     return true;
+// }
+
+
+function isPrime2($num){
+    if($num <= 1){
+        return false;
+    }
+
+    for($i = 2; $i < $num; $i++){
+        if($num % $i === 0) return false;
+    }
+
+    return true;
+}
+
+if(isPrime2($num1)){
+    echo "$num1 is a prime number";
+}
+else{
+    echo "$num1 is not a prime number";
+}
     ?>
 </body>
 </html>
