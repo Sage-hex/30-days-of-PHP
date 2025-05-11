@@ -216,7 +216,26 @@ function isPrime2($num){
     return true;
 }
 
-if(isPrime2($num1)){
+
+function isPrime3($num){
+    if ($num == 1){
+        return false;
+    }else{
+        for($i = 2; $i < $num / 2; $i++){
+            if($num % $i == 0){
+                return false;
+            }
+        }
+    }
+    return 1;
+}
+
+
+
+
+
+
+if(isPrime3($num1)){
     echo "$num1 is a prime number";
 }
 else{
