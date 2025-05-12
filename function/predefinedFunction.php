@@ -165,6 +165,14 @@
     
     $moreInfo = array("job" => "Developer", "hobby" => "Reading");
 
+
+    // array_merge() function
+
+    // The `array_merge()` function is a built-in PHP function that merges two or more arrays into one. It combines the elements of the input arrays and returns a new array containing all the elements. If there are duplicate keys, the values from the later arrays will overwrite the values from the earlier arrays.
+    // The `array_merge()` function is useful for combining data from multiple sources or for merging related arrays into a single array for easier processing and analysis.
+
+    // Example of using array_merge() function
+
     $personalInfo = array_merge($personalInfo, $moreInfo); // Merging two arrays
     
     foreach ($personalInfo as $key => $value) {
@@ -175,25 +183,87 @@
 
 
     echo "<br>";
+   
+
+
+    // array_keys() function
+
+    // The `array_keys()` function is a built-in PHP function that returns an array of all the keys from an associative array. It is useful for extracting the keys from an array for further processing or analysis.
+    // The `array_keys()` function takes an associative array as input and returns a new array containing all the keys from the input array. It can also take an optional second argument to filter the keys based on a specific value.
+
+    // Example of using array_keys() function
+
     // print only keys of an array
 
     print_r(array_keys($personalInfo)); // Output: Array ( [0] => name [1] => age [2] => city [3] => job [4] => hobby )
-    // The `array_keys()` function is a built-in PHP function that returns an array of all the keys from an associative array. It is useful for extracting the keys from an array for further processing or analysis.
-
+    
     echo "<br>";
+
+
+
+    // array_values() function
+    // The `array_values()` function is a built-in PHP function that returns an array of all the values from an associative array. It is useful for extracting the values from an array for further processing or analysis.
+    // The array_values() function takes an array (associative or indexed) and returns all the values from the array, reindexed with numeric keys starting from 0. It accepts only one argument — the array.
+
+    // Example of using array_values() function
+
     // print only values of an array
 
     print_r(array_values($personalInfo)); // Output: Array ( [0] => John [1] => 30 [2] => New York [3] => Developer [4] => Reading )
-    // The `array_values()` function is a built-in PHP function that returns an array of all the values from an associative array. It is useful for extracting the values from an array for further processing or analysis.
-    // The `array_keys()` and `array_values()` functions are commonly used in various applications, such as data processing, reporting, and user interface design. They help ensure that array data is displayed in a consistent and readable format, making it easier for users to understand and interact with the content.
+
+    echo "<br>";
+
+    // Example of using array_values() function with a second argument
+
+    $filteredValues = array_values(array_filter($personalInfo, function ($value){
+        return $value === "John"; // Filtering values based on the value "John"
+    })); // Filtering values based on the key "name"
+    print_r($filteredValues); // Output: Array ( [0] => John )
+
+    echo "<br>";
+
+    // array_push() function
+    // The `array_push()` function is a built-in PHP function that adds one or more elements to the end of an array. It modifies the original array and returns the new number of elements in the array. The `array_push()` function is useful for dynamically adding data to an array, such as when collecting user input or building a list of items.
+    // The `array_push()` function takes two or more arguments: the array to which you want to add elements and the elements to be added. It can accept multiple elements to be added at once.
+    
+    // Example of using array_push() function
+
+    $stack = array("apple", "banana", "orange"); // Initial array
+    array_push($stack, "grape", "kiwi"); // Adding multiple elements to the end of the array
+    echo "The updated array is: ";
+    print_r($stack); // Output: The updated array is: Array ( [0] => apple [1] => banana [2] => orange [3] => grape [4] => kiwi )
+    
+    echo "<br>";
+    
+    // array_pop() function
+    // The `array_pop()` function is a built-in PHP function that removes the last element from an array and returns it. It modifies the original array by removing the last element, which can be useful for implementing stack-like behavior or managing lists of items.
+    // The `array_pop()` function takes one argument: the array from which you want to remove the last element. It returns the removed element, or null if the array is empty.
+
+    // Example of using array_pop() function
+
+    $stack2 = array("apple", "banana", "orange"); // Initial array
+    $lastElement = array_pop($stack2); // Removing the last element from the array
+    echo "The removed element is: $lastElement<br>"; // Output: The removed element is: orange
+    echo "The updated array is: ";
+    print_r($stack2); // Output: The updated array is: Array ( [0] => apple [1] => banana )
+
+    echo "<br>";
+
+    // array_shift() function
+    // The `array_shift()` function is a built-in PHP function that removes the first element from an array and returns it. It modifies the original array by removing the first element, which can be useful for implementing queue-like behavior or managing lists of items.
+    // The `array_shift()` function takes one argument: the array from which you want to remove the first element. It returns the removed element, or null if the array is empty.
+
+    // Example of using array_shift() function
+    $queue = array("apple", "banana", "orange"); // Initial array
+    $firstElement = array_shift($queue); // Removing the first element from the array
+    echo "The removed element is: $firstElement<br>"; // Output: The removed element is: apple
+    echo "The updated array is: ";
+    print_r($queue); // Output: The updated array is: Array ( [0] => banana [1] => orange )
+    // The `array_shift()` function is commonly used in various applications, such as implementing queues, managing lists of items, and processing data in a first-in-first-out (FIFO) manner. It helps simplify code and improve readability by providing a consistent way to remove elements from the beginning of an array.
 
 
     
-    
-    
-    
-    
-    
+
     
     
     ?>
