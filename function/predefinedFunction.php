@@ -261,9 +261,220 @@
     print_r($queue); // Output: The updated array is: Array ( [0] => banana [1] => orange )
     // The `array_shift()` function is commonly used in various applications, such as implementing queues, managing lists of items, and processing data in a first-in-first-out (FIFO) manner. It helps simplify code and improve readability by providing a consistent way to remove elements from the beginning of an array.
 
+    echo "<br>";
 
+    // array_unshift() function
+    // The `array_unshift()` function is a built-in PHP function that adds one or more elements to the beginning of an array. It modifies the original array and returns the new number of elements in the array. The `array_unshift()` function is useful for dynamically adding data to the front of an array, such as when collecting user input or building a list of items.
+    // The `array_unshift()` function takes two or more arguments: the array to which you want to add elements and the elements to be added. It can accept multiple elements to be added at once.
+
+    // Example of using array_unshift() function
+    $queue2 = array("banana", "orange"); // Initial array
+    array_unshift($queue2, "apple", "grape"); // Adding multiple elements to the beginning of the array
+    echo "The updated array is: ";
+    print_r($queue2); // Output: The updated array is: Array ( [0] => apple [1] => grape [2] => banana [3] => orange )
+    echo "<br>";
+
+
+    // array_splice() function
+    // The `array_splice()` function is a built-in PHP function that removes a portion of an array and replaces it with new elements. It modifies the original array and returns the removed elements as a new array. The `array_splice()` function is useful for inserting, deleting, or replacing elements in an array at specific positions.
+    // The `array_splice()` function takes three required arguments: the array to be modified, the starting index from which to remove elements, and the number of elements to remove. It can also take additional arguments for the new elements to be inserted.
+
+    // Example of using array_splice() function
+    $fruits = array("apple", "banana", "orange", "grape"); // Initial array
+    $removedFruits = array_splice($fruits, 1, 2, array("kiwi", "mango")); // Removing 2 elements starting from index 1 and replacing them with new elements
+    echo "The removed fruits are: ";
+    print_r($removedFruits); // Output: The removed fruits are: Array ( [0] => banana [1] => orange )
+    echo "<br>";
+    echo "The updated array is: ";
+    print_r($fruits); // Output: The updated array is: Array ( [0] => apple [1] => kiwi [2] => mango [3] => grape )
+
+    echo "<br>";
+
+
+
+    // array_slice() function
+    // The `array_slice()` function is a built-in PHP function that extracts a portion of an array and returns it as a new array. It does not modify the original array. The `array_slice()` function is useful for retrieving specific sections of an array without altering the original data.
+    // The `array_slice()` function takes three required arguments: the array to be sliced, the starting index from which to extract elements, and the length of the slice. It can also take an optional fourth argument to specify whether to preserve the keys of the original array.
+
+    // Example of using array_slice() function
+    $fruits2 = array("apple", "banana", "orange", "grape"); // Initial array
+    $slicedFruits = array_slice($fruits2, 1, 2); // Extracting 2 elements starting from index 1
+    echo "The sliced fruits are: ";
+    print_r($slicedFruits); // Output: The sliced fruits are: Array ( [0] => banana [1] => orange )
+
+    echo "<br>";
+
+    // Array Search Functions
+    // Array search functions are built-in functions in PHP that perform various operations to search for specific elements or values within arrays. These functions are part of the standard library and provide a convenient way to locate and manipulate data within arrays without needing to implement complex algorithms manually. Array search functions cover a wide range of operations, including searching for keys, values, and specific conditions.
+    // They are optimized for performance and reliability, making them a valuable resource for developers. Array search functions help simplify code and improve readability by providing a consistent way to perform search operations. By using array search functions, developers can focus on higher-level logic and application design rather than reinventing the wheel for common search tasks.
+    // Array search functions are widely used in PHP and other programming languages to handle data effectively. They help streamline development processes and improve code maintainability by providing a rich set of tools for searching and manipulating arrays.
+    // Array search functions are an essential part of programming languages, providing a powerful set of tools to locate and manipulate data efficiently.
+    // They are commonly used in various applications to handle data effectively and improve code maintainability by providing a consistent way to search for specific elements or values within arrays.
+
+    // Example of using array_search() function
+
+    $cars = array("Volvo", "BMW", "Toyota", "Honda", "Mercedes"); // Initial array
+    $searchValue = "Toyota"; // Value to search for
+    $searchKey = array_search($searchValue, $cars); // Searching for the value in the array
+    if ($searchKey !== false) {
+        echo "The value '$searchValue' is found at index: $searchKey<br>"; // Output: The value 'Toyota' is found at index: 2
+    } else {
+        echo "The value '$searchValue' is not found in the array<br>";
+    }
+
+    echo "<br>";
+    // Example 2
+
+    echo array_search("BMW", $cars); // Output: 1 (index of "BMW" in the array)
+    echo "<br>";
+
+    // count() function
+    // The `count()` function is a built-in PHP function that counts the number of elements in an array or the number of properties in an object. It returns an integer value representing the total count of elements or properties. The `count()` function is useful for determining the size of an array or object, validating input data, and performing various operations based on the number of elements.
+    // The `count()` function takes one argument, which is the array or object whose elements or properties you want to count. It can also take an optional second argument to specify the mode of counting (e.g., counting all elements or only the top-level elements).
+
+    // Example of using count() function
+
+    echo "The number of elements in the array is: " . count($cars) . "<br>"; // Output: The number of elements in the array is: 5
+    
+    echo "<br>";
+
+    echo count($cars);
+
+    echo "<br>";
+
+
+
+    // Date and Time Functions
+
+    // Date and time functions are built-in functions in PHP that perform various operations related to date and time manipulation. These functions are part of the standard library and provide a convenient way to work with date and time data without needing to implement complex algorithms manually. Date and time functions cover a wide range of operations, including formatting, parsing, calculating differences, and more.
+    // They are optimized for performance and reliability, making them a valuable resource for developers. Date and time functions help simplify code and improve readability by providing a consistent way to perform date and time operations. By using date and time functions, developers can focus on higher-level logic and application design rather than reinventing the wheel for common date and time tasks.
+    // Date and time functions are widely used in PHP and other programming languages to handle date and time data effectively. They help streamline development processes and improve code maintainability by providing a rich set of tools for working with date and time information.
+    // Date and time functions are an essential part of programming languages, providing a powerful set of tools to manipulate and process date and time data efficiently.
+    // They are commonly used in various applications to handle date and time data effectively and improve code maintainability by providing a consistent way to perform date and time operations.
+    // Date and time functions are widely used in various applications, such as scheduling, logging, and data analysis. They help ensure that date and time data is handled accurately and consistently, making it easier for developers to work with time-sensitive information.
+
+    // Date
+    // 'j' - Day of the month without leading zeros (1 to 31)	
+    // 'd' - Day of the month with leading zeros (01 to 31)
+    // 'l' - Full textual representation of the day of the week (Sunday to Saturday)
+    // 'D' - Three-letter abbreviation of the day of the week (Mon to Sun)
+    // 'F' - Full textual representation of the month (January to December)
+    // 'M' - Three-letter abbreviation of the month (Jan to Dec)
+    // 'n' - Numeric representation of the month without leading zeros (1 to 12)
+    // 'm' - Numeric representation of the month with leading zeros (01 to 12)
+    // 'Y' - Four-digit representation of the year (e.g., 2023)
+    // 'y' - Two-digit representation of the year (e.g., 23)
+    // 'a' - Lowercase Ante meridiem and Post meridiem (am or pm)
+    // 'A' - Uppercase Ante meridiem and Post meridiem (AM or PM)
+    // 'g' - 12-hour format of an hour without leading zeros (1 to 12)
+    // 'G' - 24-hour format of an hour without leading zeros (0 to 23)
+    // 'h' - 12-hour format of an hour with leading zeros (01 to 12)
+    // 'H' - 24-hour format of an hour with leading zeros (00 to 23)
+    // 'i' - Minutes with leading zeros (00 to 59)
+    // 's' - Seconds with leading zeros (00 to 59)
+    // 'U' - Seconds since the Unix Epoch (January 1 1970 00:00:00 GMT)
+    // 't' - Number of days in the given month (28 to 31)
+    // 'z' - The day of the year (0 to 365)
+    // 'W' - ISO-8601 week number of year (weeks starting on Monday)
+    // 'o' - ISO-8601 year number (e.g., 2023)
+    // 'c' - ISO 8601 date (e.g., 2023-10-01T12:34:56+00:00)
+    // 'r' - RFC 2822 formatted date (e.g., Mon, 01 Oct 2023 12:34:56 +0000)
+    // 'U' - Seconds since the Unix Epoch (January 1 1970 00:00:00 GMT)
+    // 'e' - Timezone identifier (e.g., Europe/London)
+    // 'I' - Whether or not the date is in daylight saving time (1 if DST, 0 if not)
+    // 'O' - Difference to Greenwich time (GMT) in hours (e.g., +0200)
+    // 'P' - Difference to Greenwich time (GMT) with colon (e.g., +02:00)
+    // 'T' - Timezone abbreviation (e.g., UTC, GMT, EST)
+    // 'Z' - Timezone offset in seconds (e.g., -3600 for GMT+1)
+    // 'c' - ISO 8601 date (e.g., 2023-10-01T12:34:56+00:00)
+    // 'r' - RFC 2822 formatted date (e.g., Mon, 01 Oct 2023 12:34:56 +0000)
+    // 'U' - Seconds since the Unix Epoch (January 1 1970 00:00:00 GMT)
+    // 'e' - Timezone identifier (e.g., Europe/London)
+    
+    echo date("l jS \of F Y h:i:s A"); // Output: Sunday 1st of October 2023 12:34:56 PM
+    echo "<br>";
+
+    echo date('Y/m/d');
+
+    echo "<br>";
+
+    // Times
+    // 'h' - 12-hour format of an hour with leading zeros (01 to 12)
+    // 'H' - 24-hour format of an hour with leading zeros (00 to 23)
+    // 'i' - Minutes with leading zeros (00 to 59)
+    // 's' - Seconds with leading zeros (00 to 59)
+    // 'a' - Lowercase Ante meridiem and Post meridiem (am or pm)
+    // 'A' - Uppercase Ante meridiem and Post meridiem (AM or PM)
+    // 'g' - 12-hour format of an hour without leading zeros (1 to 12)
+    // 'G' - 24-hour format of an hour without leading zeros (0 to 23)
     
 
+    // 'g' = Hours in 12-hour format without zeros
+    // 'h' = Hours in 12-hour format with zeros
+    // 'G' = Hours in 24-hour format without zeros
+    // 'H' = Hours in 24-hour format with zeros
+    // 'a' = am/pm in lowercase
+    // 'A' = AM/PM in uppercase
+    // 'i' = Minutes without leading zeros
+    // 's' = Seconds without leading zeros
+    // 'u' = Microseconds (up to 6 digits)
+
+    echo date('H:i:s a');
+    date_default_timezone_set('America/New_York'); // Set the default timezone to New York
+    echo "<br>";
+
+    // Strtotime() function
+    // The `strtotime()` function is a built-in PHP function that converts a string representation of a date and time into a Unix timestamp. It is useful for parsing date and time strings in various formats and converting them into a standard format for further processing or calculations.
+    // The `strtotime()` function takes a single argument, which is the string representation of the date and time to be converted. It returns the Unix timestamp (the number of seconds since January 1, 1970) or false if the conversion fails.
+
+    // Example of using strtotime() function
+
+    $time = strtotime("now"); // Current date and time
+    echo "The current Unix timestamp is: $time<br>"; // Output: The current Unix timestamp is: 1696155600 (example value)
+
+    echo "<br>";
+    // Unix time is the value represented as sdeconsd calculated, since UNIX EPoch, january 1, 1970, 00:00:00 GMT. It is a widely used time representation in computing and programming.
+    // it is also called Unix timestamp, epoch time, or POSIX time. It is a system for tracking time in a consistent and standardized way across different platforms and programming languages.
+    // Unix time is often used in databases, APIs, and other systems that require precise time representation and calculations. It is a simple and efficient way to represent time as a single integer value, making it easy to perform arithmetic operations and comparisons.
+    // Unix time is widely used in various applications, such as scheduling, logging, and data analysis. It helps ensure that date and time data is handled accurately and consistently, making it easier for developers to work with time-sensitive information.
+
+    echo date('m/d/Y H:i:s', $time); // Output: 10/01/2023 12:34:56 (example value)
+    echo "<br>";
+
+
+
+    // Random Number Functions
+    // Random number functions are built-in functions in PHP that generate random numbers or perform operations related to randomness. These functions are part of the standard library and provide a convenient way to work with random data without needing to implement complex algorithms manually. Random number functions cover a wide range of operations, including generating random integers, floating-point numbers, and more.
+    // They are optimized for performance and reliability, making them a valuable resource for developers. Random number functions help simplify code and improve readability by providing a consistent way to perform random operations. By using random number functions, developers can focus on higher-level logic and application design rather than reinventing the wheel for common random tasks.
+    // Random number functions are widely used in PHP and other programming languages to handle random data effectively. They help streamline development processes and improve code maintainability by providing a rich set of tools for working with random numbers.
+
+    // Example of using rand() function
+    // The `rand()` function is a built-in PHP function that generates a random integer between two specified values. It is useful for generating random numbers for various purposes, such as simulations, games, and random sampling.
+    // The `rand()` function takes two optional arguments: the minimum and maximum values for the random number. If no arguments are provided, it generates a random integer between 0 and the maximum value of the integer type.
+    // The `rand()` function returns a random integer within the specified range.
+
+    // Example of using rand() function
+
+    // echo rand()
+
+
+    $min = 1;
+    $max = 10:
+    echo rand($min $max); // Generates a random integer between 1 and 10
+    echo "<br>";
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     ?>
