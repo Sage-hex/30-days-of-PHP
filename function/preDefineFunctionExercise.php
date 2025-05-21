@@ -40,7 +40,26 @@ arsort($Numbers, SORT_NUMERIC | SORT_DESC);
  * Your code here:
  */
 
+$birthdayMonth = 8; // Replace with your birthday month
+$birthdayDay = 25;  // Replace with your birthday day
+$currentYear = date("Y");
 
+// Set the target timestamp for this year's birthday
+$targetDays = mktime(0, 0, 0, $birthdayMonth, $birthdayDay, $currentYear);
+
+// If the birthday has already passed this year, calculate for the next year
+if ($targetDays < time()) {
+    $targetDays = mktime(0, 0, 0, $birthdayMonth, $birthdayDay, $currentYear + 1);
+}
+$today = time();
+$differenceDays = $targetDays - $today;
+$days = (int)($differenceDays / (60 * 60 * 24));
+
+if ($days < 0) {
+    echo "My birthday has already passed this year!<br>";
+} else {
+    echo "There are $days days until my birthday!<br>";
+}
 /**
  * Exercise 3: Generating random float numbers
  * Create a random number function 'randNumber' that generates random float numbers (not integers).
@@ -49,6 +68,14 @@ arsort($Numbers, SORT_NUMERIC | SORT_DESC);
  * Your code here:
  */
 
+ function randNumber($min, $max) {
+    // Generate a random float number between $min and $max
+    return mt_rand($min * 100, $max * 100) / 100;
+}
+$min = 1.5; // Minimum value
+$max = 10.5; // Maximum value
+$randomFloat = randNumber($min, $max);
+echo "Random float number between $min and $max: $randomFloat<br>";
 
 /**
  * Exercise 4: Lowercase check
@@ -59,6 +86,15 @@ arsort($Numbers, SORT_NUMERIC | SORT_DESC);
  * Your code here:
  */
 
+ $str = "THIS IS A LONG PIECE OF TEXT THAT NEEDS TO BE CONVERTED TO LOWERCASE.";
+
+ function lowerCaseCheck($text){
+    return strtolower($text);
+ }
+
+    $lowercaseText = lowerCaseCheck($str);
+    echo "Original text: $str<br>";
+    echo "Lowercase text: $lowercaseText<br>";
 
 /**
  * Exercise 5: Search inside of a text
@@ -70,7 +106,20 @@ arsort($Numbers, SORT_NUMERIC | SORT_DESC);
  * Your code here:
  */
 
+$punctuation = 0;
 
+function searchText($str, $punctuation){
+    for ($i = 0; $i < strlen($str);$i ++)
+
+    if($str[$i] == "."){
+        $punctuation++;
+    }
+    echo "The text has " . $punctuation . " Punctuation";
+}
+
+searchText($str, $punctuation);
+
+echo "<br>";
 /**
  * Exercise 6: Lowest and highest values
  * Create an array 'onlyNumbers' that has integer values inside of it.
@@ -80,6 +129,10 @@ arsort($Numbers, SORT_NUMERIC | SORT_DESC);
  * Your code here:
  */
 
+$onlyNumbers = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+$minValue = min($onlyNumbers);
+$maxValue = max($onlyNumbers);
+echo "The lowest value is $minValue and the highest value is $maxValue<br>";
 
 /**
  * Exercise 7: String repeat
@@ -87,6 +140,17 @@ arsort($Numbers, SORT_NUMERIC | SORT_DESC);
  * 
  * Your code here:
  */
+
+$str = "Hello, World!";
+$repeatCount = 8;
+function repeatString($str, $count) {
+    return str_repeat($str, $count);
+}
+
+$repeatedString = repeatString($str, $repeatCount);
+
+echo "Repeated string: $repeatedString<br>";
+
 
 ?>
 </body>

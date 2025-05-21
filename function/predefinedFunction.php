@@ -420,10 +420,17 @@
     // 'u' = Microseconds (up to 6 digits)
 
     echo date('H:i:s a');
-    date_default_timezone_set('America/New_York'); // Set the default timezone to New York
     echo "<br>";
 
+    // Set Timezone
+    date_default_timezone_set('America/New_York'); // Set the default timezone to New York
+    date_default_timezone_set('Europe/Amsterdam'); // Set the default timezone to Amsterdam
+    date_default_timezone_set('Asia/Tokyo'); // Set the default timezone to Tokyo
+
+
     // Strtotime() function
+
+
     // The `strtotime()` function is a built-in PHP function that converts a string representation of a date and time into a Unix timestamp. It is useful for parsing date and time strings in various formats and converting them into a standard format for further processing or calculations.
     // The `strtotime()` function takes a single argument, which is the string representation of the date and time to be converted. It returns the Unix timestamp (the number of seconds since January 1, 1970) or false if the conversion fails.
 
@@ -438,12 +445,14 @@
     // Unix time is often used in databases, APIs, and other systems that require precise time representation and calculations. It is a simple and efficient way to represent time as a single integer value, making it easy to perform arithmetic operations and comparisons.
     // Unix time is widely used in various applications, such as scheduling, logging, and data analysis. It helps ensure that date and time data is handled accurately and consistently, making it easier for developers to work with time-sensitive information.
 
-    echo date('m/d/Y H:i:s', $time); // Output: 10/01/2023 12:34:56 (example value)
+    echo date('m/d/Y H:i:s a', $time); // Output: 10/01/2023 12:34:56 (example value)
     echo "<br>";
 
 
 
     // Random Number Functions
+
+
     // Random number functions are built-in functions in PHP that generate random numbers or perform operations related to randomness. These functions are part of the standard library and provide a convenient way to work with random data without needing to implement complex algorithms manually. Random number functions cover a wide range of operations, including generating random integers, floating-point numbers, and more.
     // They are optimized for performance and reliability, making them a valuable resource for developers. Random number functions help simplify code and improve readability by providing a consistent way to perform random operations. By using random number functions, developers can focus on higher-level logic and application design rather than reinventing the wheel for common random tasks.
     // Random number functions are widely used in PHP and other programming languages to handle random data effectively. They help streamline development processes and improve code maintainability by providing a rich set of tools for working with random numbers.
@@ -457,6 +466,8 @@
 
     // echo rand()
 
+    echo rand(1, 10); // Generates a random integer between 1 and 10
+    echo "<br>";
 
     $min = 1;
     $max = 10:
