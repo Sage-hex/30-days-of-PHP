@@ -36,9 +36,6 @@
     add();
     echo "The sum of x and y is: " . $GLOBALS['z'] . "<br>";
     
-    // Example of using $_POST superglobal
-    // Collect data from the html from (invisible in this code) after submitting it
-
     
     
     
