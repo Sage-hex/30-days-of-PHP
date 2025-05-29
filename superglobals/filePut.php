@@ -46,7 +46,8 @@
     if(isset($_POST['submit'])){
         // $myFile = fopen("uploads/testfile.txt", "w"); //w is used to write to the file note that it will overwrite the file if it already exists
         $myFile = fopen("uploads/testfile.txt", "a"); //a is used to append to the file, note that it will not overwrite the file if it already exists
-        $txt = $_POST['name'] . " is " . $_POST['age'] . " years old";
+        // $txt = $_POST['name'] . " is " . $_POST['age'] . " years old";
+        $txt = "My age is " . $_POST['age'] . "\n";
         fwrite($myFile, $txt);
         fclose($myFile);
         // The fclose() function is used to close an open file
