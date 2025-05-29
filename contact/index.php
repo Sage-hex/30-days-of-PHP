@@ -11,7 +11,7 @@
 
     <h1>Get in touch</h1>
     <p>Please fill in the fields</p>
-    <form action="index.php" method="post">
+    <form action="contact.php" method="post">
         <label for="name">Name:</label>
         <input type="text" name="name" placeholder="Full Name">
         <br>
@@ -22,7 +22,7 @@
         <input type="text" name="subject" placeholder="Subject">
         <br>
     
-        <textarea name="textarea" placeholder="Message"></textarea>
+        <textarea name="message" placeholder="Message"></textarea>
         <br>
         <button type="submit" name="submit">Send Email</button>
 
